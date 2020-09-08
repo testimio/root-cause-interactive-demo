@@ -10,6 +10,6 @@ describe("Hover and delete todo", function () {
     await page.click(".todo-list > :nth-child(3) button.destroy");
 
     // Talk to Ben is now 3
-    await expect(page).toMatchElement(".todo-list > :nth-child(3) label", { text: "Talk to Ben" });
+    await expect(page).toEqualText(".todo-list > :nth-child(3) label", "Talk to Ben");
   }, 30000);
 });

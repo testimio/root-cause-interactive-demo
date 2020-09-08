@@ -17,4 +17,4 @@ it("Should mark all todo items as completed and then as uncompleted", async func
 
   const allNotCompletedItems = await page.$$(".todo-list li:not(.completed)");
   expect(allNotCompletedItems).toHaveLength(4);
-}, 300000);
+}, 30000);

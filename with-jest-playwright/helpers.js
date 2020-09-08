@@ -13,12 +13,11 @@ module.exports = {
 
 /**
  *
- * @param {import('puppeteer').Page | import('playwright').Page} page
+ * @param {import('playwright').Page} page
  * @param {string} selector
  * @param {string} expectedClass
  */
 async function expectHaveClass(page, selector, expectedClass) {
-  // @ts-expect-error
   const el = await page.waitForSelector(selector);
   const classProp = await (await el.getProperty("className")).jsonValue();
   expect(classProp).toEqual(expect.stringContaining(expectedClass));
@@ -26,12 +25,11 @@ async function expectHaveClass(page, selector, expectedClass) {
 
 /**
  *
- * @param {import('puppeteer').Page | import('playwright').Page} page
+ * @param {import('playwright').Page} page
  * @param {string} selector
  * @param {string} unExpectedClass
  */
 async function expectNotHaveClass(page, selector, unExpectedClass) {
-  // @ts-expect-error
   const el = await page.waitForSelector(selector);
   const classProp = await (await el.getProperty("className")).jsonValue();
   expect(classProp).toEqual(expect.not.stringContaining(unExpectedClass));
@@ -39,7 +37,7 @@ async function expectNotHaveClass(page, selector, unExpectedClass) {
 
 /**
  *
- * @param {import('puppeteer').Page | import('playwright').Page} page
+ * @param {import('playwright').Page} page
  */
 async function navigateToBaseUrl(page) {
   await page.goto(getBaseUrl());
@@ -64,19 +62,18 @@ function sleep(time) {
 
 /**
  *
- * @param {import('puppeteer').Page | import('playwright').Page} page
+ * @param {import('playwright').Page} page
  * @param {string} selector
  * @param {"Enter" | "Tab"} key
  */
 async function sendSpecialCharacter(page, selector, key) {
-  // @ts-expect-error
   const elementHandle = await page.waitForSelector(selector);
   await elementHandle.press(key);
 }
 
 /**
  *
- * @param {import('puppeteer').Page | import('playwright').Page} page
+ * @param {import('playwright').Page} page
  */
 async function addBasicBaseTodos(page) {
   await page.type(".new-todo", "Buy milk");

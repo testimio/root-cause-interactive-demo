@@ -5,7 +5,7 @@ const port = process.env.TEST_SERVER_PORT ? Number(process.env.TEST_SERVER_PORT)
 module.exports = {
   browserContext: "incognito",
   exitOnPageError: false,
-  launch: {
+  launchOptions: {
     slowMo: process.env.SLOW_MO ? Number.parseInt(process.env.SLOW_MO) : undefined,
     headless: process.env.HEADLESS !== "false",
     args: ["--no-sandbox", "--disable-setuid-sandbox"],

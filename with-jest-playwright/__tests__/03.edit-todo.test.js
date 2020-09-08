@@ -13,7 +13,5 @@ it("Should edit todo", async function () {
   await sendSpecialCharacter(page, ".todo-list > :nth-child(2) input.edit", "Enter");
   await sendSpecialCharacter(page, ".todo-list > :nth-child(2) input.edit", "Enter");
 
-  await expect(page).toMatchElement(".todo-list > :nth-child(2) label", {
-    text: "Order Pizza with Mushrooms",
-  });
+  await expect(page).toEqualText(".todo-list > :nth-child(2) label", "Order Pizza with Mushrooms");
 });
