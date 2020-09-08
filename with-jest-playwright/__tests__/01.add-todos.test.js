@@ -15,8 +15,8 @@ it("Should add 4 todos", async function () {
   await page.type(".new-todo", "Talk to Ben");
   await sendSpecialCharacter(page, ".new-todo", "Enter");
 
-  await expect(page).toMatchElement(".todo-list > :nth-child(1) label", { text: "Buy milk" });
-  await expect(page).toMatchElement(".todo-list > :nth-child(2) label", { text: "Order Pizza" });
-  await expect(page).toMatchElement(".todo-list > :nth-child(3) label", { text: "Wash the dishes" });
-  await expect(page).toMatchElement(".todo-list > :nth-child(4) label", { text: "Talk to Ben" });
+  await expect(page).toHaveText(".todo-list > :nth-child(1) label", { text: "Buy milk" });
+  await expect(page).toHaveText(".todo-list > :nth-child(2) label", { text: "Order Pizza" });
+  await expect(page).toHaveText(".todo-list > :nth-child(3) label", { text: "Wash the dishes" });
+  await expect(page).toHaveText(".todo-list > :nth-child(4) label", { text: "Talk to Ben" });
 });
