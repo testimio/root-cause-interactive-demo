@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: ./setupExamplesCode.sh && cd with-jest && npm install && cd -
+    command: cd with-jest && npx jest && npx rc ls
+
+ports:
+  - port: 9876
+    onOpen: open-browser
