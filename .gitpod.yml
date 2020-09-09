@@ -3,28 +3,18 @@ image:
 
 tasks:
   - init: |
-      set -x
-      if [ -n $RUN_PLAYWRIGHT_EXAMPLE ]
+      # set -x
+
+      if [[ -z "${RUN_PLAYWRIGHT_EXAMPLE}" ]]
       then
-        cd with-jest-playwright
-      else
         cd with-jest-puppeteer
+      else
+        cd with-jest-playwright
       fi
       npm install
       cd -
 
-    command: |
-      set -x
-
-      if [ -n $RUN_PLAYWRIGHT_EXAMPLE ]
-      then
-        cd with-jest-playwright
-      else
-        cd with-jest-puppeteer
-      fi
-      npx jest
-      npx rc ls
-      npx rc ls --simple | xargs npx rc show
+    command: ./gitpodCommand.sh
 
 ports:
   - port: 9876

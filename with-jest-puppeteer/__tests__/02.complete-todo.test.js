@@ -11,4 +11,4 @@ it("Should mark specific todo item as completed", async function () {
   await page.click(".todo-list > :nth-child(3) input[type=checkbox]");
 
   await expectNotHaveClass(page, ".todo-list > :nth-child(3)", "completed");
-});
+}, 10_000);

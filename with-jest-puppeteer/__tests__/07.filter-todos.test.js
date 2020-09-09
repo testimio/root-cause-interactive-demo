@@ -31,4 +31,4 @@ it("Filter todos controls", async function () {
 
   allNotCompletedItems = await page.$$(".todo-list li:not(.completed)");
   expect(allNotCompletedItems).toHaveLength(3);
-});
+}, 10000);
