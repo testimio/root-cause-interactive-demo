@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full-vnc
+FROM gitpod/workspace-full
 
 RUN sudo apt-get update && \
     sudo apt-get install -y \
@@ -40,3 +40,16 @@ RUN sudo apt-get update && \
         wget \
         xdg-utils && \
     sudo rm -rf /var/lib/apt/lists/*
+
+# pre-fill npm cache with what we probobly going to need to speedup npm installs
+COPY --chown=gitpod:gitpod with-jest-playwright with-jest-playwright
+RUN cd with-jest-playwright && \
+    npm install && \
+    cd ../ && \
+    rm -fr with-jest-playwright
+
+COPY --chown=gitpod:gitpod with-jest-puppeteer with-jest-puppeteer
+RUN cd with-jest-puppeteer && \
+    npm install && \
+    cd ../ && \
+    rm -fr with-jest-puppeteer

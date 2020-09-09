@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: bnayatestim/root-cause-gitpod-demo-image:latest
 
 tasks:
   - init: |
@@ -11,7 +10,7 @@ tasks:
       else
         cd with-jest-playwright
       fi
-      npm install
+      npm install --prefer-offline
       cd -
 
     command: ./gitpodCommand.sh
