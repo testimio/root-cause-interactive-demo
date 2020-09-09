@@ -2,8 +2,29 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: ./setupExamplesCode.sh && cd with-jest && npm install && cd -
-    command: cd with-jest && npx jest && npx rc ls
+  - init: |
+      set -x
+      if [ -n $RUN_PLAYWRIGHT_EXAMPLE ]
+      then
+        cd with-jest-playwright
+      else
+        cd with-jest-puppeteer
+      fi
+      npm install
+      cd -
+
+    command: |
+      set -x
+
+      if [ -n $RUN_PLAYWRIGHT_EXAMPLE ]
+      then
+        cd with-jest-playwright
+      else
+        cd with-jest-puppeteer
+      fi
+      npx jest
+      npx rc ls
+      npx rc ls --simple | xargs npx rc show
 
 ports:
   - port: 9876

@@ -46,8 +46,8 @@ async function navigateToBaseUrl(page) {
 }
 
 function getBaseUrl() {
-  return process.env.TEST_BASE_URL || "http://localhost:8080/react";
-  // return process.env.TEST_BASE_URL || "http://todomvc.com/examples/react";
+  // return process.env.TEST_BASE_URL || "http://localhost:8080/react";
+  return process.env.TEST_BASE_URL || "http://todomvc.com/examples/react";
 }
 
 /**
