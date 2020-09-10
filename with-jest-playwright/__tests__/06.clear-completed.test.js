@@ -1,4 +1,9 @@
-const { navigateToBaseUrl, addBasicBaseTodos, expectHaveClass, expectNotHaveClass } = require("../helpers");
+const {
+  navigateToBaseUrl,
+  addBasicBaseTodos,
+  expectHaveClass,
+  expectNotHaveClass,
+} = require("../helpers");
 
 it("Clear button should delete completed todos", async function () {
   await navigateToBaseUrl(page);

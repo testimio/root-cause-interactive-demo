@@ -1,4 +1,9 @@
-const { navigateToBaseUrl, addBasicBaseTodos, expectHaveClass, expectNotHaveClass } = require("../helpers");
+const {
+  navigateToBaseUrl,
+  addBasicBaseTodos,
+  expectHaveClass,
+  expectNotHaveClass,
+} = require("../helpers");
 
 it("Should mark specific todo item as completed", async function () {
   await navigateToBaseUrl(page);
