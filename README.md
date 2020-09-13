@@ -1,19 +1,22 @@
 # Testim Root Cause Demo
 
-Testim Root Cause is an open source tool for troubleshooting 🔎 Puppeteer and Playwright tests (And your preferred test runner).
+[Testim Root Cause](https://github.com/testimio/root-cause) is an open source tool for troubleshooting 🔎 Puppeteer and Playwright tests (And your preferred test runner).
 
-<img src="./readmeImages/stackTraceTab.png" width="400px" border="1">
-<img src="./readmeImages/screenshotTab.png" width="400px" border="1">
-<img src="./readmeImages/RC_2_2x_speed.gif" width="600px" border="3">
+### To quickly run the demo (You can open it in a new tab, and let it load while reading):
 
-To quickly run the demo (You can open it in a new tab, and let it load while reading):  
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/testimio/root-cause-interactive-demo)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#snapshot/f6c20016-c62b-4f4f-b128-54ae5a305340)
 
 (If you are already in GitPod, follow the terminal)
+
+<p align="center"><img src="./readmeImages/RC_2_2x_speed.gif" width="600px" border="3"></p>
 
 ## What's inside
 
 In the demo, we have E2E tests for the popular [TodoMVC](http://todomvc.com/) project, written with jest and puppeteer in the with-jest-puppeteer folder, and in with-jest-playwright we have the same tests, but with playwright.
+
+<p align="center">
+<img src="./readmeImages/stackTraceTab.png" width="400px" border="1"><img src="./readmeImages/screenshotTab.png" width="400px" border="1">
+</p>
 
 ## Running the demo
 
