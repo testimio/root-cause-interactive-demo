@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@testim/root-cause-jest": "^0.1.17-canary-158.6",
+    "@testim/root-cause-jest": "^0.1.18-canary-179.6",
     "@types/jest": "^26.0.13",
     "@types/node": "^12.12.55",
     "cross-env": "^7.0.2",
