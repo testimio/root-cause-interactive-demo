@@ -13,7 +13,7 @@ tasks:
       npm install --prefer-offline
       cd -
 
-    command: ./gitpodCommand.sh
+    command: source gitpodCommand.sh
 
 ports:
   - port: 9876

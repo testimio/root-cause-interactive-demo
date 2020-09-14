@@ -1,5 +1,3 @@
-set -x
-
 if [[ -z "${RUN_PLAYWRIGHT_EXAMPLE}" ]]
 then
   cd with-jest-puppeteer
