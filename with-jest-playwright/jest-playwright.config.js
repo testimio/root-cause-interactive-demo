@@ -10,9 +10,9 @@ module.exports = {
     headless: process.env.HEADLESS !== "false",
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
-  serverOptions: {
-    command: `cross-env PORT=${port} http-server ../todomvc-c50cc922495fd76cb44844e3b1cd77e35a5d6be1/examples`,
-    port,
-    launchTimeout: 4000,
-  },
+  // serverOptions: {
+  //   command: `cross-env PORT=${port} http-server ../todomvc-c50cc922495fd76cb44844e3b1cd77e35a5d6be1/examples`,
+  //   port,
+  //   launchTimeout: 4000,
+  // },
 };
